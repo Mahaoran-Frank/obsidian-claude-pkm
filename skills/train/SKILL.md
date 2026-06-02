@@ -58,7 +58,15 @@ If the user gets stuck or says "I don't know":
 
 ### Noting insights
 
-During the session, if the user says something genuinely sharp or original — something they worked out themselves rather than recalled — say: "That's worth writing down." Then continue.
+The output of a training session is the user's own **judgments** — not a restatement of the source. A judgment has the user as its subject ("I think…", "this breaks when…", "I used to believe X, actually Y"). A sentence whose subject is the author ("the document says…") is a summary, not a training output — don't capture it.
+
+Judgments come in five shapes. Watch for them during the session, and when one appears say "That's worth writing down", then continue:
+
+1. **Position** — "I think X / I'd side with…"
+2. **Boundary** — "this framework breaks when Z"
+3. **Correction** — "I used to think A, actually it's B"
+4. **Connection** — "this is the same logic as W"
+5. **Gap** — "I haven't worked out Y yet"
 
 ## Step 3: End the session
 
@@ -88,15 +96,16 @@ Once confirmed, check CLAUDE.md for a wiki or framework library path. If defined
 
 ### Framework entry format
 
-Each framework entry must follow:
+A framework is a reusable judgment tool, not a summary. It must be executable: if you can't fill in "when to use" and "what it makes you do", it isn't a framework yet — leave it as a practice note. Each entry follows:
 
-**Framework title**
-1-2 sentences explaining the core idea.
+**Framework title** (a verb phrase, not a noun)
+- **Claim**: one sentence — what this asserts
+- **Trigger**: when I should reach for it ("when I'm looking at ___")
+- **Move**: what it makes me do / ask → what I conclude
+- **Boundary**: when it does NOT hold
+- **Source(s)**: the specific case(s) it was derived from — when a new source validates it, append here rather than duplicating
 
-Source:
-- Specific source — what context or case this was derived from (not just the title)
-
-When new sources validate an existing framework, append under Source rather than creating a duplicate.
+A framework earns a spot only when it transfers: you can take it to an object that never appeared in the source material. With a single source, keep it as a candidate; promote it once a second independent source hits the same tool.
 
 ## Tone and language
 
