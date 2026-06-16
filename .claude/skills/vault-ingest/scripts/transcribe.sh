@@ -9,7 +9,7 @@
 #
 # 用法: transcribe.sh <URL> <输出目录> [标题提示]
 # 成功: 退出 0，最后一行打印  OUTPUT=<生成的md路径>
-# 失败: 退出非 0，打印  REASON=<人话原因>  —— 调用方据此写入 failures.md 并告诉 Frank
+# 失败: 退出非 0，打印  REASON=<人话原因>  —— 调用方据此写入 failures.md 并告诉用户
 #
 # 环境变量:
 #   WHISPER_MODEL  默认 medium；想更快用 large-v3-turbo / distil-large-v3.5；想更准用 large-v3
@@ -27,7 +27,7 @@ WHISPER="$(command -v whisper-ctranslate2 || echo "$HOME/.local/bin/whisper-ctra
 # Cookie 处理（绕过 B站 412 风控等）。优先级：显式文件 > 显式浏览器 > 按域名兜底。
 #   COOKIES_FILE=<path>        用导出的 cookies.txt
 #   COOKIES_BROWSER=chrome|... 从指定浏览器读
-#   默认：bilibili 链接自动用 chrome（Frank 已登录），其余不带
+#   默认：bilibili 链接自动用 chrome（用户已登录），其余不带
 COOKIE_ARGS=()
 if [ -n "${COOKIES_FILE:-}" ]; then
   COOKIE_ARGS=(--cookies "$COOKIES_FILE")
